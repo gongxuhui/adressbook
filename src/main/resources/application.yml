@@ -1,1 +1,18 @@
+#通过yml文件构建多文档块，区分不同环境配置，自由切换不同环境启动项目。
+spring:
+  profiles:
+    active: dev
 
+# 文档块一
+---
+server:
+     port: 8081
+spring:
+  profiles: test
+
+#文档开二
+---
+server:
+     port: 8082
+spring:
+  profiles: dev
