@@ -55,15 +55,20 @@ spring:
     filter:
       stat:
         log-slow-sql: true
-    initialization-mode: always
     # 启动时初始化数据库（只需要第一次启动时需要
-    schema:
-      - classpath:sql/employee.sql
-      - classpath:sql/product.sql
-
+  #  initialization-mode: always
+  #  schema:
+  #    - classpath:sql/employee.sql
+  #    - classpath:sql/product.sql
+mybatis:
+  #config-location: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mappers/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 
 # 文档块一
+
 ---
 server:
      port: 8081

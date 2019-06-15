@@ -1,5 +1,6 @@
 package com.gxh;
 
+import com.gxh.dao.EmployeeMapper;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +15,12 @@ public class AdressbookApplicationTests {
 
     @Autowired
     private DataSource dataSource;
+    @Autowired
+    private EmployeeMapper employeeMapper;
 
     @Test
     public void contextLoads() throws SQLException {
-        System.out.println(dataSource);
+        System.out.println(employeeMapper.getData());
     }
 
 
