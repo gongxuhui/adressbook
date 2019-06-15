@@ -1,4 +1,4 @@
-package com.gxh.adressbook;
+package com.gxh;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
