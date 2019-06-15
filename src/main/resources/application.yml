@@ -8,6 +8,7 @@ spring:
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
+
     # druid连接池配置
     initial-size: 5
     min-idle: 5
@@ -54,8 +55,15 @@ spring:
     filter:
       stat:
         log-slow-sql: true
-# 文档块一
+    initialization-mode: always
+    # 启动时初始化数据库（只需要第一次启动时需要
+    schema:
+      - classpath:sql/employee.sql
+      - classpath:sql/product.sql
 
+
+
+# 文档块一
 ---
 server:
      port: 8081
