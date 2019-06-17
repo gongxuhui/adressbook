@@ -65,10 +65,10 @@ mybatis:
   mapper-locations: classpath:mybatis/mappers/*.xml
   configuration:
     map-underscore-to-camel-case: true
-
+swagger:
+  enable: true
 
 # 文档块一
-
 ---
 server:
      port: 8081
