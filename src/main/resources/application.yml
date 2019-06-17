@@ -4,7 +4,7 @@ spring:
     active: test
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://127.0.0.1:3306/cpedubai?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+    url: jdbc:mysql://192.168.80.109:3306/cpedubai?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
@@ -56,10 +56,10 @@ spring:
       stat:
         log-slow-sql: true
     # 启动时初始化数据库（只需要第一次启动时需要
-  #  initialization-mode: always
-  #  schema:
-  #    - classpath:sql/employee.sql
-  #    - classpath:sql/product.sql
+    initialization-mode: always
+    schema:
+      - classpath:sql/employee.sql
+      - classpath:sql/product.sql
 mybatis:
   #config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mappers/*.xml
@@ -67,6 +67,8 @@ mybatis:
     map-underscore-to-camel-case: true
 swagger:
   enable: true
+adressbook:
+  showsql: true
 
 # 文档块一
 ---
