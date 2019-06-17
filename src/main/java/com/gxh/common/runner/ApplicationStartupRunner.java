@@ -19,16 +19,12 @@ import java.net.InetAddress;
 public class ApplicationStartupRunner implements ApplicationRunner {
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
-
     @Autowired
     private ConfigurableApplicationContext context;
-
     @Value("${server.port:8080}")
     private String port;
-
     @Value("${server.servlet.context-path:}")
     private String contextPath;
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
         if (context.isActive()) {
