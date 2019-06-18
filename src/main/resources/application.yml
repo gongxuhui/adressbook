@@ -69,16 +69,21 @@ swagger:
   enable: true
 adressbook:
   showsql: true
-
-# 文档块一
+logging:
+  level:
+    com.gxh.dao: debug
+  file:
+    max-size: 10M
 ---
+### 文档块一 ###
 server:
      port: 8081
 spring:
   profiles: test
 
-#文档开二
+
 ---
+#### 文档开二 ###
 server:
      port: 8082
 spring:
