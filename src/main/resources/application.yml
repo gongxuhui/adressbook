@@ -56,10 +56,10 @@ spring:
       stat:
         log-slow-sql: true
     # 启动时初始化数据库（只需要第一次启动时需要
-    initialization-mode: always
-    schema:
-      - classpath:sql/employee.sql
-      - classpath:sql/product.sql
+   # initialization-mode: always
+   # schema:
+   #   - classpath:sql/employee.sql
+   #   - classpath:sql/product.sql
 mybatis:
   #config-location: classpath:mybatis/mybatis-config.xml
   mapper-locations: classpath:mybatis/mappers/*.xml
