@@ -1,12 +1,40 @@
 package com.gxh.entity;
 
 import lombok.Data;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
+
+import javax.persistence.Table;
+import java.util.Date;
+
 @Data
 public class User {
-   public int id;
-   public String username;
-   public String password;
+
+   private Long userId;
+
+   private String username;
+
+   private String password;
+
+   private Long deptId;
+
+   //private String deptName;
+
+   private String email;
+
+   private String mobile;
+
+   private String status;
+
+   private Date createTime;
+
+   private Date modifyTime;
+
+   private Date lastLoginTime;
+
+   private String sex;
+
+   private String theme;
+
+   private String avatar;
+
+   private String description;
 }

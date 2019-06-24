@@ -65,6 +65,11 @@ mybatis:
   mapper-locations: classpath:mybatis/mappers/*.xml
   configuration:
     map-underscore-to-camel-case: true
+
+mapper:
+  mappers: com.gxh.common.mapper.MyMapper
+  identity: MYSQL
+
 swagger:
   enable: true
 adressbook:
